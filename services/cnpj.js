@@ -1,4 +1,4 @@
 import axios from 'axios';
 
 export const getCnpjData = (cnpj) =>
-  axios.get(`https://minhareceita.org/${cnpj}`);
+  axios.get(`https://minhareceita.org/${cnpj.replace(/\D/gim, '')}`);
